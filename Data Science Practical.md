@@ -79,25 +79,25 @@ duplicate_records = churn.duplicated(subset=['CustomerID']).sum()
 
 print(f"Number of duplicate records based on CustomerID: {duplicate_records}")
 ```
-#### **Total number of missing values for the variable TotalCharges**
+#### Total number of missing values for the variable TotalCharges
 ```python
 missing_total_charges = churn['TotalCharges'].isnull().sum()
 print(f"Total number of missing values for TotalCharges {missing_total_charges}")
 ```
-#### **Average monthly charge paid by a customer**
+#### Average monthly charge paid by a customer
 ```python
-**# Assuming the column representing monthly charges is named MonthlyCharges:**
-**# Calculate average monthly charge**
+# Assuming the column representing monthly charges is named MonthlyCharges:
+# Calculate average monthly charge
 average_monthly_charge = churn['MonthlyCharges'].mean()
 print(f"Average monthly charge paid by a customer: {average_monthly_charge}")
 ```
-#### **Number of records in the Dependents column that have "1@#"**
+#### Number of records in the Dependents column that have "1@#"
 ```python
-**# Count records in Dependents column that have "1@#"**
+# Count records in Dependents column that have "1@#"
 dependents_count = (churn['Dependents'] == '1@#').sum()
 print(f"Number of records in Dependents column with '1@#': {dependents_count}")
 ```
-#### **Find the data type of the variable tenure from the churn dataframe**
+#### Find the data type of the variable tenure from the churn dataframe
 ```python
 # Check the data type of the variable 'tenure'
 tenure_dtype = churn['tenure'].dtype print(f"Data type of the variable 'tenure': {tenure_dtype}")
